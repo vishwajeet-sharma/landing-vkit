@@ -18,7 +18,7 @@ const HeroSection = () => {
     <Wrapper>
       <Inner>
         <Pill>
-          <span>Introducing vakil It</span>
+          <span>Introducing VakilIt</span>
           {/* <Image src={ic_chevron_right} alt="chevron-right" /> */}
         </Pill>
         <HeroTextContainer>

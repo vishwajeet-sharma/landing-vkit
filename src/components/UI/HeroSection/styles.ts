@@ -39,6 +39,7 @@ export const Pill = styled.div`
 
 export const HeroTextContainer = styled.div`
   display: flex;
+  width: 80vw;
   flex-direction: column;
   gap: 1.5rem;
   padding-bottom: 2rem;
