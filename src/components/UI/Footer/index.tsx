@@ -9,11 +9,11 @@ import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
 const linksArr = [
   {
     title: 'About us',
-    links: ['Our Company', 'Careers', 'Press kits'],
+    links: ['Our Company', 'Careers'],
   },
   {
     title: 'Legal',
-    links: ['Terms of use', 'Privacy policy', 'About us'],
+    links: ['Terms of use', 'Privacy policy'],
   },
   {
     title: 'About us',
@@ -42,49 +42,7 @@ import {
 const Footer = () => {
   return (
     <Wrapper>
-      <Inner>
-        {/* <FooterLogo>
-          <Image src={raft_footer_logo} alt="raft_footer_logo" />
-        </FooterLogo> */}
-        <FooterMainContent>
-          <FooterMiddle>
-            {/* <QRContainer>
-              <QRImageCtn>
-                <Image src={qr_code} alt="qr_code" />
-              </QRImageCtn>
-              <TextCtn>
-                <p>Scan to download App on the Playstore and Appstore.</p>
-                <IconCtn>
-                  <Image src={ic_google_playstore} alt="playstore icon" />
-                  <Image src={ic_baseline_apple} alt="apple icon" />
-                </IconCtn>
-              </TextCtn>
-            </QRContainer> */}
-            <FooterNavigation>
-              {linksArr.map((l, i) => (
-                <GridColumn key={i}>
-                  <h3>{l.title}</h3>
-                  <LinksContainer>
-                    {l.links.map((link, i) => (
-                      <li key={i}>{link}</li>
-                    ))}
-                  </LinksContainer>
-                </GridColumn>
-              ))}
-            </FooterNavigation>
-          </FooterMiddle>
-          <FooterBottom>
-            <Translator>
-              <h3>English (United Kingdom)</h3>
-              <Image src={ic_chevron_down} alt="chevron down" />
-            </Translator>
-            <CopyRight>
-              <Image src={ic_copyright} alt="copyright svg" />
-              vakil It Corp, LLC.
-            </CopyRight>
-          </FooterBottom>
-        </FooterMainContent>
-      </Inner>
+      
     </Wrapper>
   );
 };

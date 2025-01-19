@@ -4,6 +4,7 @@ export const menu = {
     height: '300px',
     top: '-25px',
     right: '-25px',
+    color:'red',
     transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] },
   },
 
@@ -22,15 +23,15 @@ export const menu = {
 };
 export const links = [
   {
-    url: '/',
-    linkTo: 'Solutions',
+    url: '/home',
+    linkTo: 'Lawyer Search',
   },
   {
-    url: '/',
-    linkTo: 'Learn',
+    url: '/saved',
+    linkTo: 'Saved',
   },
   {
-    url: '/',
-    linkTo: 'About',
+    url: '/profile',
+    linkTo: 'Profile',
   },
 ];
