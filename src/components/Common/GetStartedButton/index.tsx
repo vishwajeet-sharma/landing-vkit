@@ -5,9 +5,9 @@ const GetStartedButton = ({ padding }: { padding: string }) => {
   return (
     <LinkTo
       style={{
-        padding: padding,
+      padding: padding,
       }}
-      href="https://wakilit.vercel.app//chat"
+      href="/home"
     >
       Get Started
     </LinkTo>
