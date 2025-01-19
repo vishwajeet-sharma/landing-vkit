@@ -57,26 +57,37 @@ const letterAnimationTwo = {
   },
 };
 
-const AnimatedLink = ({ title }: { title: string }) => {
+const AnimatedLink = ({
+  title,
+  href,
+}: {
+  title: string;
+  href: string;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <Div
+    <a
+      href={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      className="inline-block text-decoration-none"
     >
-      <AnimatedWord
-        title={title}
-        animations={letterAnimation}
-        isHovered={isHovered}
-      />
-      <AbsoluteContainer>
+      <Div>
         <AnimatedWord
           title={title}
-          animations={letterAnimationTwo}
+          animations={letterAnimation}
           isHovered={isHovered}
         />
-      </AbsoluteContainer>
-    </Div>
+        <AbsoluteContainer>
+          <AnimatedWord
+            title={title}
+            animations={letterAnimationTwo}
+            isHovered={isHovered}
+          />
+        </AbsoluteContainer>
+      </Div>
+    </a>
   );
 };
 
