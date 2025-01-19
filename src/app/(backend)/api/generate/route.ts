@@ -10,7 +10,6 @@ const groq = new Groq({
 const systemPrompt = `You are an expert legal assistant. Based on the following user inputs of location and type of case, use the following csv data to suggest lawyer name, number of wins, losses, rating, :
 
 Name,Area_of_Expertise,Cases_Won,Cases_Lost,Notable_Case,Years_of_Experience,Bar_Council_State,City,Minimum_Fee,Rating
-Name,Area_of_Expertise,Cases_Won,Cases_Lost,Notable_Case,Years_of_Experience,Bar_Council_State,City,Minimum_Fee,Rating
 Rajesh Kumar Sharma,Criminal Law,145,32,"State of Maharashtra v. Singh (2022) - Murder Defense",22,Maharashtra,Mumbai,25000,4.8
 Priya Venkatesh,Corporate Law,89,15,"Reliance Industries Merger Case (2021)",15,Delhi,New Delhi,35000,4.7
 Mohammed Ismail Khan,Constitutional Law,167,41,"PIL on Environmental Protection",28,Karnataka,Bangalore,40000,4.9
@@ -61,7 +60,7 @@ Sameer Oberoi,Banking Fraud,167,47,"Financial Crime Case",20,Delhi,New Delhi,500
 Anjana Krishna,Environmental Protection,91,25,"Wildlife Conservation Case",14,Kerala,Kochi,30000,4.5
 Vinod Sharma,Labor Rights,178,55,"Employee Benefits Dispute",22,Haryana,Gurgaon,35000,4.6
 
-Please provide a list of at least three lawyers. The response should strictly be in the following JSON format:
+Please provide a list of at least three lawyers when asked for. The response should strictly be in the following JSON format:
 [
   {
     Name:'Name',

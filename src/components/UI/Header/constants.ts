@@ -22,15 +22,15 @@ export const menu = {
 };
 export const links = [
   {
-    url: '/',
-    linkTo: 'Solutions',
+    url: '/home',
+    linkTo: 'Lawyer Search',
   },
   {
-    url: '/',
-    linkTo: 'Learn',
+    url: '/saved',
+    linkTo: 'Saved',
   },
   {
-    url: '/',
-    linkTo: 'About',
+    url: '/profile',
+    linkTo: 'Profile',
   },
 ];
