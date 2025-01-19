@@ -14,12 +14,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <Featured />
-      {/* <OffersSection />
-      <FinancilaFreedom />
-      <FinancialFuture />
-      <IntroSection />
-      <JoinSection />
-      <FAQ /> */}
+      
     </main>
   );
 }

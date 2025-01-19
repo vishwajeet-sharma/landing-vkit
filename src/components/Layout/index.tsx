@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className={complete ? 'complete' : 'not_complete'}>
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </ReactLenis>
     </StyledComponentsRegistry>

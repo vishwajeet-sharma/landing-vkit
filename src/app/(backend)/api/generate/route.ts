@@ -60,7 +60,7 @@ Sameer Oberoi,Banking Fraud,167,47,"Financial Crime Case",20,Delhi,New Delhi,500
 Anjana Krishna,Environmental Protection,91,25,"Wildlife Conservation Case",14,Kerala,Kochi,30000,4.5
 Vinod Sharma,Labor Rights,178,55,"Employee Benefits Dispute",22,Haryana,Gurgaon,35000,4.6
 
-Please provide a list of at least three lawyers when asked for. The response should strictly be in the following JSON format:
+Please provide a list of maximum three lawyers when asked for, in order of cases won, from highest to lowest. The response should strictly be in the following JSON format:
 [
   {
     Name:'Name',

@@ -6,6 +6,7 @@ import { Input } from '@/components/input';
 import { Button } from '@/components/button';
 import { ScrollArea } from '@/components/scroll-area';
 import { Send } from 'lucide-react';
+import { EmojiEvents, Star } from '@mui/icons-material';
 
 interface Lawyer {
     Name: string;
@@ -74,10 +75,10 @@ const Chatbot = () => {
     };
 
     return (
-        <div className="w-full max-w-4xl mx-auto p-4">
+        <div className="w-full max-w-6xl mx-auto p-4">
             <Card className="bg-black border-gray-800">
                 <CardHeader className="border-b border-gray-800">
-                    <CardTitle className="text-gray-200">Legal Assistant</CardTitle>
+                    <CardTitle className="text-gray-200 mx-auto">Lawyer Search</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                     <ScrollArea className="h-[500px] p-4">
@@ -98,20 +99,37 @@ const Chatbot = () => {
                                     >
                                         <div>{message.content}</div>
                                         {message.lawyers && message.lawyers.length > 0 && (
-                                            <div className="mt-3 space-y-2">
+                                            <div className="mt-3 flex flex-wrap gap-5">
                                                 {message.lawyers.map((lawyer: Lawyer, idx: number) => (
-                                                    <div key={idx} className="border border-gray-700 rounded p-2 bg-gray-900">
-                                                        <div className="font-semibold">{lawyer.Name}</div>
-                                                        <div className="text-sm">
-                                                            <div>Expertise: {lawyer["Area of Expertise"]}</div>
-                                                            <div>Cases Won: {lawyer["Cases Won"]}</div>
-                                                            <div>Rating: {lawyer.Rating}/5.0</div>
-                                                            <div>Fees: ₹{lawyer.Fees}</div>
-                                                        </div>
+                                                <div
+                                                key={idx}
+                                                className="border border-gray-700 rounded p-4 bg-gray-900 flex flex-col justify-center items-center text-center min-w-[250px] h-95 transition-transform duration-300 hover:scale-110"
+                                            >
+                                                <div className="font-semibold text-lg text-gray-200 mb-2">{lawyer.Name}</div>
+                                                <div className="text-sm text-gray-400 space-y-2">
+                                                    <div>
+                                                        <span className="font-medium text-gray-300">Expertise:</span> {lawyer["Area of Expertise"]}
                                                     </div>
+                                                    <div className="flex items-center justify-center">
+                                                        <EmojiEvents className="text-green-500 mr-2" />
+                                                        <span className="font-semibold text-green-500">{lawyer["Cases Won"]}</span>
+                                                    </div>
+                                                    <div className="flex items-center justify-center">
+                                                        <Star className="text-yellow-500 mr-2" />
+                                                        <span className="font-semibold text-yellow-500">{lawyer.Rating}/5.0</span>
+                                                    </div>
+                                                    <div>
+                                                        <span className="font-medium text-red-300">Fees: ₹{lawyer.Fees}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                                
+                                                
                                                 ))}
                                             </div>
                                         )}
+
                                     </div>
                                 </div>
                             ))}
